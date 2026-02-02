@@ -171,7 +171,8 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Will you be my valentine on February 10 ?</h1>
+    <!-- TITLE (ONLY FIRST PAGE) -->
+    <h1 id="title">Will you be my valentine on February 10 ?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -197,6 +198,7 @@
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
+    const title = document.getElementById("title");
 
     /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -292,7 +294,8 @@
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
       zone.style.display = "none";
-      hint.style.display = "none";     // HIDE THE HINT
+      hint.style.display = "none";
+      title.style.display = "none"; // ✅ TITLE ONLY ON FIRST PAGE
       result.style.display = "block";
       resizeConfettiCanvas();
       fullScreenConfetti();
@@ -300,6 +303,3 @@
   </script>
 </body>
 </html>
-
-
-
